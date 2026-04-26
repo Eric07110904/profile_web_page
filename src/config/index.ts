@@ -1,21 +1,20 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Your Name — Personal Website",
-  author: "Your Name",
+  title: "Pin-Feng Qiu (Callum) — Software & Backend Engineer",
+  author: "Pin-Feng Qiu (Callum)",
   description:
-    "A short one-line intro about who you are, what you build, and the kind of work you are looking for.",
-  lang: "zh-TW",
-  siteLogo: "/profile-placeholder.svg",
+    "Software and backend engineer with a research background in deep learning, GANs, image generation, and production-focused application development.",
+  lang: "en",
+  siteLogo: "/about-photo.jpg",
   navLinks: [
     { text: "About", href: "#about" },
+    { text: "Education", href: "#education" },
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
   ],
   socialLinks: [
-    { text: "GitHub", href: "https://github.com/your-account" },
-    { text: "LinkedIn", href: "https://www.linkedin.com/in/your-profile" },
-    { text: "Email", href: "mailto:you@example.com" },
+    { text: "Email", href: "mailto:azsx26735546@gmail.com" },
   ],
   socialImage: "/og-cover.svg",
   canonicalURL: "https://your-site.vercel.app",
@@ -23,70 +22,73 @@ export const SITE_CONFIG: SiteConfig = {
 
 export const SITE_CONTENT: SiteContent = {
   hero: {
-    name: "Your Name",
-    specialty: "Frontend Developer / Product Engineer",
+    name: "Pin-Feng Qiu (Callum)",
+    specialty: "Software & Backend Engineer",
     summary:
-      "Write 2 to 3 sentences here that introduce your background, your focus, and the type of products or teams you enjoy working with.",
-    email: "you@example.com",
+      "I build backend systems and AI-driven applications with a strong foundation in deep learning, image generation, and production software development. My work spans research, industry collaboration, and practical system delivery.",
+    email: "azsx26735546@gmail.com",
   },
+  education: [
+    {
+      company: "National Taiwan University of Science and Technology",
+      logo: "/logo-ntust-official.png",
+      position: "M.S. in Engineering and Computer Science, GAME Lab",
+      startDate: "Sep 2021",
+      endDate: "Aug 2023",
+      summary: [
+        "Focused on deep learning research in image generation, GANs, and Generative Adversarial Networks.",
+        "Completed multiple collaborative projects with industry partners and gained hands-on experience leading cross-functional development as a project manager.",
+        "Graduated with a 4.23/4.30 GPA while working in Professor Wen-Kai Tai's GAME Lab.",
+      ],
+    },
+    {
+      company: "National Yunlin University of Science and Technology",
+      logo: "/logo-nyust-official.png",
+      position: "B.S. in Engineering and Computer Science",
+      startDate: "Sep 2017",
+      endDate: "Jun 2021",
+      summary: [
+        "Built a strong foundation in software engineering, algorithms, and system development.",
+        "Graduated with a 3.94/4.00 GPA and received the ICPC Taiwan National Contest for Technology Universities Gold Award.",
+      ],
+    },
+  ],
   experience: [
     {
-      company: "Your Current Company",
-      position: "Your Role",
-      startDate: "2023",
+      company: "Moxa",
+      logo: "/logo-moxa-official.svg",
+      position: "Software Engineer",
+      startDate: "Jun 2024",
       endDate: "Present",
-      summary: [
-        "Describe the scope of your work and the kind of product, system, or users you supported.",
-        "Add one or two concrete outcomes here, such as performance gains, shipped features, team ownership, or business impact.",
-      ],
-    },
-    {
-      company: "Previous Company",
-      position: "Previous Role",
-      startDate: "2021",
-      endDate: "2023",
-      summary: [
-        "Summarize the main responsibilities of this role in one or two lines.",
-        "Use numbers when possible to make the impact easier to understand.",
-      ],
-    },
-    {
-      company: "Earlier Experience",
-      position: "Another Role",
-      startDate: "2019",
-      endDate: "2021",
-      summary: "Add a shorter one-paragraph description here if you do not need multiple bullet points.",
+      summary: "",
     },
   ],
   projects: [
     {
-      name: "Project One",
-      summary: "What it is, who it helps, and what your contribution was.",
-      linkPreview: "https://your-project-demo.com",
-      linkSource: "https://github.com/your-account/project-one",
+      name: "Anime Portrait Editing Tool",
+      summary:
+        "Built an anime portrait creation and editing system with GAN inversion, segmentation-map control, a custom anime dataset, and an improved anime-specific loss function.",
       image: "/project-placeholder.svg",
     },
     {
-      name: "Project Two",
-      summary: "A second project entry with a short and clear explanation.",
-      linkPreview: "https://your-second-demo.com",
-      linkSource: "https://github.com/your-account/project-two",
+      name: "HRM Classification with Deep Learning",
+      summary:
+        "Developed a two-stage medical AI pipeline for swallow classification, including ROI detection, CNN-based prediction, and a hospital-facing labeling system built with Vue.js, FastAPI, and PostgreSQL.",
       image: "/project-placeholder.svg",
     },
     {
-      name: "Project Three",
-      summary: "A third project entry to showcase something visual, technical, or product-focused.",
-      linkPreview: "https://your-third-demo.com",
-      linkSource: "https://github.com/your-account/project-three",
+      name: "Elderly Care and Localization System",
+      summary:
+        "Created a GPS and Wi-Fi tracking platform with electronic fence monitoring, RabbitMQ-based messaging, Dockerized microservices, and a Vue.js plus Flask application stack.",
       image: "/project-placeholder.svg",
     },
   ],
   about: {
     description: `
-      Use this section for a more personal introduction. You can talk about your technical strengths, product thinking, industries you have worked in, or how you like to collaborate with teams.
+      I am a software and backend engineer with a graduate research background in deep learning, image generation, and GAN-based systems. I enjoy turning research ideas into usable software, especially when the work involves strong engineering discipline, practical backend architecture, and collaboration with real users or industry partners.
 
-      If you are job hunting, this is also a good place to mention what kind of role you are looking for, your location or timezone, and whether you are open to remote work.
+      Across my academic and project experience, I have worked on medical AI, image editing tools, IoT systems, and location-aware applications. I care about building systems that are not only technically sound, but also useful, maintainable, and well integrated into real workflows.
     `,
-    image: "/profile-placeholder.svg",
+    image: "/about-photo.jpg",
   },
 };
