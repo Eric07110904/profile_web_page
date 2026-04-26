@@ -1,0 +1,20 @@
+---
+import Section from "./Section.astro";
+
+interface Props {
+  achievements: string[];
+}
+
+const { achievements } = Astro.props;
+---
+
+<Section text="Achievements" href="achievements">
+  <div class="space-y-3">
+    {achievements.map((item) => (
+      <div class="flex items-start gap-4 rounded-2xl border border-neutral/20 bg-white/3 px-5 py-4">
+        <span class="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full bg-primary"></span>
+        <p class="text-base text-neutral md:text-lg">{item}</p>
+      </div>
+    ))}
+  </div>
+</Section>

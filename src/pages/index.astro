@@ -3,6 +3,7 @@ import { SITE_CONTENT } from "@config";
 import Hero from "@components/Hero.astro";
 import Layout from "@layouts/Layout.astro";
 import Experience from "@components/Experience.astro";
+import Achievements from "@components/Achievements.astro";
 import Projects from "@components/Projects.astro";
 import About from "@components/About.astro";
 
@@ -13,14 +14,16 @@ import "../styles/global.css";
   <Hero {...SITE_CONTENT.hero} />
   <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
   <Experience
+    title="Work Experience"
+    href="experience"
+    variant="work"
+    experience={SITE_CONTENT.experience}
+  />
+  <Experience
     title="Education"
     href="education"
     experience={SITE_CONTENT.education}
   />
-  <Experience
-    title="Work Experience"
-    href="experience"
-    experience={SITE_CONTENT.experience}
-  />
+  <Achievements achievements={SITE_CONTENT.achievements} />
   <Projects projects={SITE_CONTENT.projects} />
 </Layout>
