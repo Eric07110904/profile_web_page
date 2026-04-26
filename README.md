@@ -1,35 +1,57 @@
-# AstroZen - Personal Portfolio Website
+# Personal Portfolio Website
 
-AstroZen is a minimalist, accessible and responsive portfolio template for your personal portfolio website. It is built with Astro and TailwindCSS.
+This repo is based on the AstroZen template and has been adjusted so you can replace the sample content with your own profile more easily.
 
-![zen-og](https://github.com/user-attachments/assets/7a72aaae-6652-4cd0-becc-8e6a3c224993)
+## Where to edit your content
 
-> [!NOTE]
-> The information contained in this template, including names, images, and content, is entirely fictitious and is intended solely to give the design a realistic appearance. Any coincidence with real-life people, events, or situations is purely coincidental. It is recommended that you replace this information with your own information.
+Update [`src/config/index.ts`](./src/config/index.ts).
 
-## 🔥 Features
+That file controls:
 
-- [x] Minimalist design. clean and simple
-- [x] Mobile-first responsive layout
-- [x] SEO-friendly and accessible
-- [x] Easy to customize with a single configuration file
+- Site title, description, logo, social links, and canonical URL
+- Hero section
+- Work experience
+- Projects
+- About section
 
-## ✅ Lighthouse Score
+The default values are now placeholders, so you can swap them out with your own data directly.
 
-![performance](https://github.com/user-attachments/assets/4f95e2ca-03f9-4996-9e34-dcd179194c58)
+## Images
 
-## 🚀 Getting Started
+If you want to replace the placeholder graphics, put your files in [`public`](./public) and update the paths in [`src/config/index.ts`](./src/config/index.ts).
 
-Clone this repository to your local machine using Git.
+Useful defaults already included:
 
-```scheme
-git clone https://github.com/immois/astro-zen.git
-cd astro-zen
+- `/profile-placeholder.svg`
+- `/project-placeholder.svg`
+- `/og-cover.svg`
+
+## Local development
+
+Use Node.js 22.12 or newer.
+
+```bash
+nvm use
+pnpm install
+pnpm dev
 ```
 
-| Command        | Action                                       |
-| :------------- | :------------------------------------------- |
-| `pnpm install` | Installs dependencies                        |
-| `pnpm dev`     | Starts local dev server at `localhost:4321`  |
-| `pnpm build`   | Build your production site to `./dist/`      |
-| `pnpm preview` | Preview your build locally, before deploying |
+Open `http://localhost:4321`.
+
+## Deploy to Vercel
+
+1. Push this repo to your own GitHub repository.
+2. Go to [Vercel](https://vercel.com/new).
+3. Import the GitHub repo.
+4. Keep the default framework preset detected by Vercel for Astro.
+5. Set the Node.js version to `22.x` in the Vercel project settings if Vercel does not pick it automatically.
+6. Click deploy.
+7. After the first deployment, copy your Vercel production domain and update `canonicalURL` in [`src/config/index.ts`](./src/config/index.ts).
+
+No extra adapter is required for this project because it builds as a static Astro site.
+
+## Build commands
+
+- `pnpm dev` starts the local dev server
+- `pnpm build` creates the production build in `dist`
+- `pnpm preview` previews the production build locally

@@ -13,10 +13,12 @@ const {
   author,
   socialLinks,
   socialImage,
-  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+  canonicalURL,
 } = SITE_CONFIG;
 
-const ogImgUrl = canonicalURL + socialImage;
+const siteBaseURL = Astro.site?.href ?? canonicalURL ?? Astro.url.origin;
+const resolvedCanonicalURL = new URL(Astro.url.pathname, siteBaseURL).href;
+const ogImgUrl = new URL(socialImage, siteBaseURL).href;
 ---
 
 <!doctype html>
@@ -35,11 +37,11 @@ const ogImgUrl = canonicalURL + socialImage;
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:url" content={resolvedCanonicalURL} />
     <meta property="og:image" content={ogImgUrl} />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:url" content={resolvedCanonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImgUrl} />
