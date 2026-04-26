@@ -8,9 +8,9 @@ export const SITE_CONFIG: SiteConfig = {
   lang: "zh-TW",
   siteLogo: "/profile-placeholder.svg",
   navLinks: [
+    { text: "About", href: "#about" },
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
-    { text: "About", href: "#about" },
   ],
   socialLinks: [
     { text: "GitHub", href: "https://github.com/your-account" },
